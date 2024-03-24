@@ -36,7 +36,6 @@ var stdin = bufio.NewScanner(os.Stdin)
 
 func main() {
 	var wMode = wmStandard 
-	var partnerSpendPub, partnerViewPub *[32]byte // For split-key construct
 	
 	var network = vanity.MoreloMainNetwork
 
