@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-const halfAddressLength = 45
+const halfAddressLength = 49
 
 var (
 	minPriv = &[32]byte{
@@ -33,7 +33,7 @@ func init() {
 // IsValidPrefix checks if a given prefix is valid as per the given network.
 func IsValidPrefix(prefix string, network Network, initIndex int) bool {
 	// check length
-	if len(prefix) == 0 || len(prefix) >= 95-initIndex {
+	if len(prefix) == 0 || len(prefix) >= 98-initIndex {
 		return false
 	}
 
@@ -56,7 +56,7 @@ func IsValidPrefix(prefix string, network Network, initIndex int) bool {
 		}
 	}
 
-	if initIndex < 2 {
+	if initIndex < 4 {
 		// check elliptic curve property
 		minAddress := minKey.Address(network)
 		maxAddress := maxKey.Address(network)

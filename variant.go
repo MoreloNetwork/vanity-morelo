@@ -1,9 +1,15 @@
 package vanity
 
+func Uint64ToBytes(num uint64) (result []byte) {
+	for ; num >= 0x80; num >>= 7 {
+		result = append(result, byte((num&0x7f)|0x80))
+	}
+	result = append(result, byte(num))
+	return
+}
+
 type Network []byte
 
 var (
-	MoneroMainNetwork = Network{0x12}
-	MoneroTestNetwork = Network{0x35}
-	GraftMainNetwork  = Network{0x5a}
+	MoreloMainNetwork  = Uint64ToBytes(0x1a29e1)
 )
