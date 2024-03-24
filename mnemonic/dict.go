@@ -8,18 +8,7 @@ import (
 const DictSize = 1626
 
 var (
-	ChineseSimplified = NewDict(chineseSimplifiedTable, 1)
-	Dutch             = NewDict(dutchTable, 4)
 	English           = NewDict(englishTable, 3)
-	Esperanto         = NewDict(esperantoTable, 4)
-	Spanish           = NewDict(spanishTable, 4)
-	French            = NewDict(frenchTable, 4)
-	German            = NewDict(germanTable, 4)
-	Italian           = NewDict(italianTable, 4)
-	Japanese          = NewDict(japaneseTable, 3)
-	Lojban            = NewDict(lojbanTable, 4)
-	Portuguese        = NewDict(portugueseTable, 4)
-	Russian           = NewDict(russianTable, 4)
 )
 
 // Dict is a dictionary for mnemonic seed.
