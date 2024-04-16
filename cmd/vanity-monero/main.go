@@ -36,8 +36,6 @@ var stdin = bufio.NewScanner(os.Stdin)
 
 func main() {
 	var wMode = wmStandard 
-	
-	var network = vanity.MoreloMainNetwork
 
 	var dict = mnemonic.English
 
@@ -59,6 +57,21 @@ or using regex pattern.`)
 		initIndex = 4
 	case 2:
 		mMode = mmRegex
+	}
+	fmt.Println()
+	
+	var network = vanity.MoreloMainNetwork
+	fmt.Println("Select network:")
+	fmt.Println("1) Morelo MAINNET")
+	fmt.Println("2) Morelo TESTNET")
+	fmt.Println("3) Morelo STAGENET")
+	switch promptNumber("Your choice:", 1, 3) {
+	case 1:
+		network = vanity.MoreloMainNetwork
+	case 2:
+		network = vanity.MoreloTestNetwork
+	case 3:
+		network = vanity.MoreloStageNetwork
 	}
 	fmt.Println()
 

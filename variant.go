@@ -12,4 +12,6 @@ type Network []byte
 
 var (
 	MoreloMainNetwork  = Uint64ToBytes(0x1a29e1)
+	MoreloTestNetwork  = Uint64ToBytes(0x80662)
+	MoreloStageNetwork  = Uint64ToBytes(0x7b62)
 )
